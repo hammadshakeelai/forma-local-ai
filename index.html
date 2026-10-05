@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f5fa" />
+  <title>Forma — a little more human</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="header">
+    <a href="./" class="brand" aria-label="Forma home"><span class="brand-mark"><i></i><i></i><i></i></span>forma<span class="brand-dot">.</span></a>
+    <span class="header-caption">A little more human.</span>
+    <button class="about-button" id="about-button">About this demo <span>↗</span></button>
+  </header>
+  <main>
+    <div class="intro"><div><p class="eyebrow"><span></span> YOUR EVERYDAY AI COMPANION</p><h1>A conversation.<br>A familiar face.</h1></div><p class="intro-copy">Think out loud. Ask a question. Just say hello.<br>Meet an AI that feels a little closer.</p></div>
+    <section class="workspace" aria-label="Conversation with Ava">
+      <div class="avatar-panel" id="avatar-panel">
+        <div id="avatar-stage" role="img" aria-label="Ava, a rendered human avatar with local audio-driven lip sync"></div>
+        <div class="portrait-shade"></div>
+        <div class="avatar-top"><span class="live-badge"><span></span> On-device avatar</span><button class="icon-button light" id="sound-button" aria-label="Turn spoken replies on" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="sound-wave" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg></button></div>
+        <div class="avatar-bottom"><div class="avatar-identity"><span class="avatar-eyebrow">HERE WITH YOU</span><h2>Meet Ava<span>✳</span></h2><p>A face. A voice. A space to be yourself.</p><button class="preview-button" id="preview-button">Hear Ava say hello ↗</button></div><div class="presence"><div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span id="presence-label">Loading Ava’s face…</span></div></div>
+      </div>
+      <div class="chat-panel">
+        <div class="chat-header"><div class="chat-title"><span class="mini-avatar">A</span><div><h2>Your space with Ava</h2><p><span></span><span id="chat-status">Here to listen</span></p></div></div><button class="icon-button" id="reset-button" aria-label="Start a new conversation" title="Start a new conversation"><svg viewBox="0 0 24 24"><path d="M4 9a8 8 0 1 1 0 6M4 4v5h5"/></svg></button></div>
+        <div class="messages" id="messages" role="log" aria-live="polite" aria-label="Chat messages"></div>
+        <div class="suggestions" id="suggestions"><p>A LITTLE SOMETHING TO START</p><div><button data-prompt="I have an idea">I have an idea <span>↗</span></button><button data-prompt="Help me unwind">Help me unwind <span>↗</span></button><button data-prompt="What can you do?">What can you do? <span>↗</span></button></div></div>
+        <div class="composer-area"><div class="mode-tabs" role="group" aria-label="Conversation mode"><button class="selected" id="text-mode" aria-pressed="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v12H8l-4 3V5Z"/></svg>Type a message</button><button id="voice-mode" aria-pressed="false"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11v1a7 7 0 0 0 14 0v-1m-7 8v3m-4 0h8"/></svg>Use your voice</button></div>
+          <form id="chat-form"><label class="sr-only" for="message-input">Message Ava</label><input id="message-input" autocomplete="off" maxlength="600" placeholder="What's on your mind?" /><button class="send-button" id="send-button" type="submit" aria-label="Send message"><svg viewBox="0 0 24 24"><path d="m7 17 10-10M7 7h10v10"/></svg></button><button class="send-button" id="mic-button" type="button" hidden aria-label="Start recording"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11v1a7 7 0 0 0 14 0v-1m-7 8v3"/></svg></button></form>
+          <p class="composer-note" id="composer-note">Local AI. Your conversation stays on this device.</p><p class="feedback" id="feedback" role="status"></p>
+        </div>
+      </div>
+    </section>
+    <footer><p><span class="footer-star">✳</span> One presence. Three possibilities.</p><div><span>Human avatar</span><i>+</i><span>Natural voice</span><i>+</i><span>Conversational AI</span></div><span class="prototype-tag">CONCEPT / 001</span></footer>
+  </main>
+  <dialog id="about-dialog"><button class="dialog-close icon-button" id="close-about" aria-label="Close about">×</button><p class="eyebrow">MEET FORMA</p><h2>One interface.<br>A more human connection.</h2><p>This concept brings a human avatar, a voice, and a small language model into one conversation.</p><p>SmolLM2 135M handles chat, Whisper Tiny handles listening, and Kitten Nano generates speech. A 14 KB trained lip-sync model animates a 3D face from the audio. This is face animation, not photorealistic video generation.</p><p>Chat and audio are processed on your device. Models download into browser storage on first use. GitHub Pages only serves the website files. Microphone access starts when you press the mic button.</p><button class="primary-button" id="back-to-chat">Let’s talk ↗</button></dialog>
+</body>
+</html>

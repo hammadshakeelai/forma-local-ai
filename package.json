@@ -1,0 +1,22 @@
+{
+  "name": "forma-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A web interface for three small local models",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "check": "node --check app.js && node --check engine.js && node --check face.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.0",
+    "@met4citizen/talkinghead": "^1.7.0",
+    "kitten-tts-webgpu": "^0.1.1",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "vite": "^7.3.6"
+  }
+}
