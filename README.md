@@ -2,7 +2,9 @@
 
 A static website for GitHub Pages. Chat, listening, speech, and face animation run on the visitor's device. No Python, API keys, hosted inference, or database.
 
-**Prototype status:** The current visual component is a 3D avatar, not a video-generation model. A real talking-face video model is being integrated. The build passes, but chat and voice still need complete browser verification. Do not treat this as a finished working release.
+[Public repository](https://github.com/hammadshakeelai/forma-local-ai) · [Website](https://hammadshakeelai.github.io/forma-local-ai/)
+
+**Prototype status:** The current visual component is a 3D avatar, not a video-generation model. A real talking-face video model remains to be implemented. The build passes, but chat and voice still need complete browser verification. Do not treat this as a finished working release.
 
 ## Run
 
@@ -30,9 +32,7 @@ The small chat model has limited reasoning and factual accuracy. English only. T
 
 ## Publish to GitHub Pages
 
-1. Create a public repository and push this source to `main`.
-2. In **Settings → Pages → Build and deployment**, choose **GitHub Actions**.
-3. The included workflow builds and publishes `dist/` on pushes to `main`.
+GitHub Pages is configured for this repository. The included workflow builds and publishes `dist/` on pushes to `main`. For a fork, enable **GitHub Actions** under **Settings → Pages → Build and deployment**.
 
 Use `npm run build` to create a static production build and `npm run preview` to check it. Relative asset paths support a project URL such as `https://YOUR-NAME.github.io/YOUR-REPO/`.
 
